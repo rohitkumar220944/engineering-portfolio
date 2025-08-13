@@ -51,7 +51,7 @@ export default function Hero() {
               <a href="https://github.com/rohitkumar220944" className="text-gray-400 hover:text-white transition-colors">
                 <Github size={24} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/rohit-kumar-264a05257/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin size={24} />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
