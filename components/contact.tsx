@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState } from "react"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
-
+import emailjs from "@emailjs/browser"
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -15,6 +15,23 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Handle form submission here
+     emailjs
+      .send("service_exs7r2u", "template_m5u3t5c",  {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    }, "4KaIDKPq9SKVJJoe4")
+      .then(
+        (result) => {
+          alert("Message sent successfully!")
+          console.log(result.text)
+          setFormData({ name: "", email: "", message: "" }) // Reset form
+        },
+        (error) => {
+          alert("Failed to send message. Please try again.")
+          console.log(error.text)
+        }
+      )
     console.log("Form submitted:", formData)
   }
 
