@@ -48,8 +48,8 @@ export default function Contact() {
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">Get In Touch</h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            I'm actively looking for entry-level backend developer opportunities where I can contribute my skills and
-            continue learning. Whether you have an internship, junior position, or project collaboration in mind, I'd
+            I&apos;m actively looking for entry-level backend developer opportunities where I can contribute my skills and
+            continue learning. Whether you have an internship, junior position, or project collaboration in mind, I&apos;d
             love to hear from you!
           </p>
         </div>
@@ -57,10 +57,10 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Let's talk</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Let&apos;s talk</h3>
               <p className="text-gray-400 leading-relaxed mb-8">
-                Whether you have a project in mind, want to collaborate, or just want to say hello, I'd love to hear
-                from you. Drop me a message and I'll get back to you as soon as possible.
+                Whether you have a project in mind, want to collaborate, or just want to say hello, I&apos;d love to hear
+                from you. Drop me a message and I&apos;ll get back to you as soon as possible.
               </p>
             </div>
 
@@ -99,7 +99,7 @@ export default function Contact() {
 
           <div className="bg-slate-800 p-8 rounded-2xl">
             <h3 className="text-2xl font-bold text-white mb-2">Send me a message</h3>
-            <p className="text-gray-400 mb-6">Fill out the form below and I'll get back to you within 24 hours.</p>
+            <p className="text-gray-400 mb-6">Fill out the form below and I&apos;ll get back to you within 24 hours.</p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>

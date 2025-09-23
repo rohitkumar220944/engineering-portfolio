@@ -146,7 +146,7 @@ icon: (
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">Skills & Technologies</h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Here are the technologies and skills I've learned during my studies and personal projects.
+            Here are the technologies and skills I&apos;ve learned during my studies and personal projects.
           </p>
         </div>
 

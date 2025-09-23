@@ -46,7 +46,7 @@ export default function About() {
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">About Me</h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
-           I build full-stack applications using modern technologies like Java, Spring Boot, and MySQL. I'm particularly interested in writing scalable backend logic and creating responsive frontends with Angular to enhance user experience.
+           I build full-stack applications using modern technologies like Java, Spring Boot, and MySQL. I&apos;m particularly interested in writing scalable backend logic and creating responsive frontends with Angular to enhance user experience.
           </p>
         </div>
 
@@ -79,10 +79,10 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-lg text-gray-400 leading-relaxed mb-6">
-                 Hi, I'm Rohit kumar, a passionate and results-driven software developer with hands-on experience in building dynamic web applications using technologies like Java, Spring Boot, Angular, and MySQL. Currently, I'm working as a Java Developer Intern, where I contribute to scalable backend solutions, develop responsive frontends, and collaborate within Agile teams.
+                 Hi, I&apos;m Rohit kumar, a passionate and results-driven software developer with hands-on experience in building dynamic web applications using technologies like Java, Spring Boot, Angular, and MySQL. Currently, I&apos;m working as a Java Developer Intern, where I contribute to scalable backend solutions, develop responsive frontends, and collaborate within Agile teams.
               </p>
               <p className="text-lg text-gray-400 leading-relaxed">
-                I'm excited to start my career in software development and contribute to innovative Java-based projects. I enjoy learning new technologies, exploring best practices in full-stack development, and staying updated with the latest industry trends. Looking forward to growing with a dynamic team and delivering impactful solutions.
+                I&apos;m excited to start my career in software development and contribute to innovative Java-based projects. I enjoy learning new technologies, exploring best practices in full-stack development, and staying updated with the latest industry trends. Looking forward to growing with a dynamic team and delivering impactful solutions.
               </p>
             </div>
             <div className="space-y-8">

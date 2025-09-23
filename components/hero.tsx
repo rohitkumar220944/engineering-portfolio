@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react"
 
 export default function Hero() {
@@ -20,7 +21,7 @@ export default function Hero() {
 
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
-                Hi, I'm <span className="text-purple-400">Rohit Kumar</span>
+                Hi, I&apos;m <span className="text-purple-400">Rohit Kumar</span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-300">Full Stack Developer & final year student</p>
             </div>
@@ -69,10 +70,13 @@ export default function Hero() {
 
               {/* Profile image */}
               <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-slate-700">
-                <img
+                <Image
                   src="/placeholder-jjhob.png"
-                  alt="Md Mustak - Full Stack Developer"
+                  alt="Rohit Kumar - Full Stack Developer"
+                  width={320}
+                  height={320}
                   className="w-full h-full object-cover"
+                  priority
                 />
               </div>
             </div>
@@ -83,6 +87,6 @@ export default function Hero() {
           <ChevronDown className="text-gray-400" size={32} />
         </div>
       </div>
-    </section>//mass
+    </section>
   )
 }

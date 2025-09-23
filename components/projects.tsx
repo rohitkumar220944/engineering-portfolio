@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { ExternalLink, Github } from "lucide-react"
 
 export default function Projects() {
@@ -36,10 +37,12 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div key={index} className="bg-slate-800 rounded-2xl overflow-hidden hover:bg-slate-700 transition-colors">
               <div className="aspect-video bg-slate-700 relative overflow-hidden">
-                <img
+                <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
 
