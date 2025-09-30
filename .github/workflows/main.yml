@@ -23,8 +23,22 @@ jobs:
       - name: Install AWS CLI
         run: sudo apt-get update && sudo apt-get install -y awscli
 
+      # 🔍 Debugging Step 1: Check who we are
+      - name: Debug AWS Identity
+        run: aws sts get-caller-identity
+
+      # 🔍 Debugging Step 2: Check if bucket is accessible
+      - name: Test S3 Access
+        run: aws s3 ls s3://rohitaarav.me
+
+      # 🔍 Debugging Step 3: See what files are being deployed
+      - name: List local files
+        run: ls -R .
+
+      # ✅ Actual Deployment Step
       - name: Deploy static site to S3 bucket
         run: aws s3 sync . s3://rohitaarav.me --delete
+
 
 
            
