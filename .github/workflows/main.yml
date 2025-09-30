@@ -48,13 +48,17 @@ jobs:
       - name: Deploy static site to S3 bucket
         run: aws s3 sync out/ s3://rohitaarav.me --delete --exclude "*.map"
 
-      # 🔄 Invalidate CloudFront cache for immediate updates
-      - name: Invalidate CloudFront
+      # ✅ Deployment Complete
+      - name: Deployment Summary
         run: |
-          DISTRIBUTION_ID=$(aws cloudfront list-distributions --query "DistributionList.Items[?Aliases.Items[0]=='rohitaarav.me'].Id" --output text)
-          if [ ! -z "$DISTRIBUTION_ID" ]; then
-            aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
-            echo "CloudFront cache invalidated for distribution: $DISTRIBUTION_ID"
-          else
-            echo "CloudFront distribution not found. Skipping invalidation."
-          fi
+          echo "🎉 Deployment completed successfully!"
+          echo ""
+          echo "� Your portfolio is now live at:"
+          echo "   🌐 http://rohitaarav.me.s3-website-us-east-1.amazonaws.com"
+          echo ""
+          echo "📊 Deployment Details:"
+          echo "   • Static files synced to S3 bucket: rohitaarav.me"
+          echo "   • Source maps excluded for security"
+          echo "   • Old files automatically cleaned up (--delete)"
+          echo ""
+          echo "💡 Pro tip: Bookmark the URL above for easy access!"
