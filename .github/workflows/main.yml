@@ -46,7 +46,21 @@ jobs:
 
       # ✅ Actual Deployment - Deploy only the built static files
       - name: Deploy static site to S3 bucket
-        run: aws s3 sync out/ s3://rohitaarav.me --delete --exclude "*.map"
+        run: |
+          echo "🚀 Starting deployment to S3..."
+          
+          # Sync files to S3 bucket
+          aws s3 sync out/ s3://rohitaarav.me --delete --exclude "*.map"
+          
+          # Set proper content types for web files
+          aws s3 cp s3://rohitaarav.me/index.html s3://rohitaarav.me/index.html --content-type "text/html" --metadata-directive REPLACE
+          aws s3 cp s3://rohitaarav.me/404.html s3://rohitaarav.me/404.html --content-type "text/html" --metadata-directive REPLACE
+          
+          # Set cache control for assets
+          aws s3 cp s3://rohitaarav.me/_next/ s3://rohitaarav.me/_next/ --recursive --content-type "application/javascript" --cache-control "max-age=31536000" --metadata-directive REPLACE --exclude "*" --include "*.js"
+          aws s3 cp s3://rohitaarav.me/_next/ s3://rohitaarav.me/_next/ --recursive --content-type "text/css" --cache-control "max-age=31536000" --metadata-directive REPLACE --exclude "*" --include "*.css"
+          
+          echo "✅ Files deployed successfully"
 
       # ✅ Deployment Complete
       - name: Deployment Summary
