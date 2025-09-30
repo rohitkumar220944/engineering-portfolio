@@ -117,7 +117,94 @@
   * {
     @apply border-border outline-ring/50;
   }
+  
+  html {
+    /* Prevent horizontal scrolling on mobile */
+    overflow-x: hidden;
+    /* Smooth scrolling */
+    scroll-behavior: smooth;
+    /* Fix iOS zoom issues */
+    -webkit-text-size-adjust: 100%;
+    /* Better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
   body {
     @apply bg-background text-foreground;
+    /* Prevent horizontal scrolling on mobile */
+    overflow-x: hidden;
+    /* Minimum height for mobile browsers */
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
+  
+  /* Fix mobile viewport height issues */
+  main {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
+  
+  /* Ensure touch targets are large enough for mobile */
+  button, 
+  [role="button"], 
+  a {
+    min-height: 44px;
+    min-width: 44px;
+    @apply flex items-center justify-center;
+  }
+  
+  /* Improve mobile form interactions */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    /* Prevent zoom on iOS */
+    font-size: 16px;
+    /* Improve mobile keyboard experience */
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+  /* Better mobile image handling */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Prevent text selection issues on mobile */
+  .no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  /* Improve touch interactions */
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+  }
+  
+  /* Optimize text sizes for mobile */
+  .mobile-text-base {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Improve button spacing on mobile */
+  .mobile-button-spacing > * + * {
+    margin-top: 0.75rem;
+  }
+}
+
+/* Landscape mobile optimizations */
+@media (max-height: 500px) and (orientation: landscape) {
+  /* Reduce padding on landscape mobile */
+  .landscape-reduce-padding {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
