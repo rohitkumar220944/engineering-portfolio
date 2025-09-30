@@ -4,13 +4,13 @@ export default function Resume() {
   return (
     <div className="max-w-4xl mx-auto p-8 bg-white text-gray-900">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold mb-2">Md Mustak</h1>
+        <h1 className="text-4xl font-bold mb-2">Rohit Kumar</h1>
         <p className="text-xl text-gray-600 mb-4">Full Stack Developer & Engineering Student</p>
 
         <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
           <div className="flex items-center gap-1">
             <Mail size={16} />
-            mustakarman560@gmail.com
+            rohitkumar220944@gmail.com
           </div>
           <div className="flex items-center gap-1">
             <Phone size={16} />
